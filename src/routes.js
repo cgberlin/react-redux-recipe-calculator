@@ -1,10 +1,14 @@
-import React from 'react';
-import { Route, IndexRoute } from 'react-router';
+import React, { Component, PropTypes } from 'react';
+import { Router, browserHistory, IndexRoute, Route } from 'react-router';
 
 /* containers */
-import app from 'containers/app'
+import App from 'containers/app'
+import MainContainer from 'containers/main-container'
 
 export default (
-  <Route path="*" component={app} >
-  </Route>
+    <Router history={browserHistory}>
+        <Route path="/" component={App}>
+          <Route path="/ingredient-search" component={MainContainer} />
+        </Route>
+    </Router>
 );
