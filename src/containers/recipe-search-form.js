@@ -1,11 +1,10 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 import store from '../index'
-import $ from 'jquery'
 var actions = require('../actions/index');
 
 class SearchForm extends Component{
-  TestMe(e) {
+  FetchRecipe(e) {
     let ingredients = this.refs.ingredientInput.value;
     console.log(ingredients);
     this.props.dispatch(actions.fetchByIngredients(ingredients));
@@ -15,7 +14,7 @@ class SearchForm extends Component{
       <div className = "search-form-recipe">
         <h2>Please input ingredients seperated by commas</h2>
         <input id = "input-ingredient-search" type = "text" ref ="ingredientInput"/>
-        <button type = "button" onClick={() => this.TestMe()}> submit </button>
+        <button type = "button" onClick={() => this.FetchRecipe()}> submit </button>
       </div>
     );
   }

@@ -29,10 +29,30 @@ var fetchByIngredients = (param) => {
   }
 };
 
+var fetchByRandom = () => {
+  return (dispatch) => {
+    return fetch('https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/random',{
+      headers: {
+        "X-Mashape-Authorization": "bZT55Qln4CmshOdE29j4CzVqdKeQp1FdEFwjsny1Sz4wwpx4gh"
+      },
+    }).then((response) => {
+      console.log('fetch made!');
+      let data = response.json();
+      return data;
+    }).then((data) => {
+      let recipe = data.recipes[0];
+      console.log(recipe);
+      return dispatch(
+        submitRecipe(recipe)
+      );
+    });
+  }
+};
 
 
 export {
   SUBMIT_RECIPE,
   submitRecipe,
-  fetchByIngredients
+  fetchByIngredients,
+  fetchByRandom
 }
