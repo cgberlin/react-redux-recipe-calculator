@@ -4,18 +4,28 @@ import store from '../index'
 import $ from 'jquery'
 var actions = require('../actions/index');
 
-class SearchForm extends React.Component{
+class SearchForm extends Component{
   TestMe(e) {
-    actions.fetchByIngredients();
+    let ingredients = this.refs.ingredientInput.value;
+    console.log(ingredients);
+    this.props.dispatch(actions.fetchByIngredients(ingredients));
   }
   render() {
     return (
       <div className = "search-form-recipe">
         <h2>Please input ingredients seperated by commas</h2>
-        <input id = "input-ingredient-search" type = "text"/>
-        <button type = "button" onClick={this.TestMe}> submit </button>
+        <input id = "input-ingredient-search" type = "text" ref ="ingredientInput"/>
+        <button type = "button" onClick={() => this.TestMe()}> submit </button>
       </div>
     );
   }
 }
-export default SearchForm;
+
+//You will probably need to have from the state the results of the recipe
+const mapStateToProps = (state) => {
+  return {
+    results: state
+  }
+};
+
+export default connect(mapStateToProps)(SearchForm);
