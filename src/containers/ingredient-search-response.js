@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 import store from '../index'
+import IngredientList from './ingredient-list'
 
 class SearchResponse extends Component{
   render() {
@@ -8,6 +9,7 @@ class SearchResponse extends Component{
     var title = recipe.title;
     var imageSrc = recipe.image;
     var instructions = recipe.instructions;
+    console.log(recipe.extendedIngredients);
     return (
       <div>
         <h4>{title}</h4>
@@ -15,12 +17,12 @@ class SearchResponse extends Component{
         <img src = {imageSrc} />
         <div />
         {instructions}
+        <div />
+        <IngredientList />
       </div>
     );
   }
 }
-
-
 
 const mapStateToProps = (state) => {
   return {
