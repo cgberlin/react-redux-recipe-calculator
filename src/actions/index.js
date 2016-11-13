@@ -20,11 +20,25 @@ var fetchByIngredients = (param) => {
       let data = response.json();
       return data;
     }).then((data) => {
-      let recipe = data[0];
-      console.log(recipe);
-      return dispatch(
-        submitRecipe(recipe)
-      );
+      let recipeId = data[0].id;
+      console.log(recipeId);
+        console.log(recipeId);
+        return fetch('https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/'+recipeId+'/information?includeNutrition=true',{
+          headers: {
+            "X-Mashape-Authorization": "bZT55Qln4CmshOdE29j4CzVqdKeQp1FdEFwjsny1Sz4wwpx4gh"
+          },
+        }).then((response) => {
+          console.log('fetch made!');
+          let data = response.json();
+          return data;
+      }).then((data) => {
+        console.log(data);
+        let recipe = data;
+        return dispatch(
+          submitRecipe(recipe)
+        );
+      });
+
     });
   }
 };

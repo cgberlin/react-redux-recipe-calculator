@@ -11,6 +11,7 @@ class IngredientList extends Component{
     }
     return (
       <div className = "ingredient-list">
+      <h4>Ingredients</h4>
       <ul>
           {recipe.extendedIngredients.map(function(ingredient) {
             return <li key={ingredient.name}>{ingredient.originalString}</li>
