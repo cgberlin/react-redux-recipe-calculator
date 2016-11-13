@@ -14,3 +14,11 @@
   font-family: 'Roboto', sans-serif;
   text-align: center;
 }
+.container {
+  display: flex;
+  align-items: center;
+  flex-flow:column;
+}
+.button-class {
+  margin:12;
+}

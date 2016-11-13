@@ -6,7 +6,7 @@ import SearchResponse from './ingredient-search-response'
 
 const RandomContainer = (props) =>{
   return (
-    <div>
+    <div className = 'container'>
       <SearchRandom />
       <SearchResponse />
     </div>

@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 import store from '../index'
 import TextField from 'material-ui/TextField';
+import RaisedButton from 'material-ui/RaisedButton';
 var actions = require('../actions/index');
 
 class SearchForm extends Component{
@@ -15,7 +16,7 @@ class SearchForm extends Component{
       <div className = "search-form-recipe">
         <h3 className = "roboto-text">Please input ingredients seperated by commas</h3>
         <TextField hintText="mushrooms,chicken,tomato" ref ="ingredientInput"/>
-        <button type = "button" onClick={() => this.FetchRecipe()}> submit </button>
+        <RaisedButton className = "button-class" type = "button" onClick={() => this.FetchRecipe()}> submit </RaisedButton>
       </div>
     );
   }

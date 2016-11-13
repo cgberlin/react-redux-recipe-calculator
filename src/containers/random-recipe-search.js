@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 import store from '../index'
+import RaisedButton from 'material-ui/RaisedButton';
 var actions = require('../actions/index');
 
 class SearchRandom extends Component{
@@ -10,7 +11,7 @@ class SearchRandom extends Component{
   render() {
     return (
       <div className = "search-random-recipe">
-        <button type = "button" onClick={() => this.FetchRandom()}> Random! </button>
+        <RaisedButton className = "button-class" type = "button" onClick={() => this.FetchRandom()}> Random! </RaisedButton>
       </div>
     );
   }

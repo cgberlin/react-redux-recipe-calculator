@@ -6,7 +6,7 @@ import SearchResponse from './ingredient-search-response'
 
 const MainContainer = (props) =>{
   return (
-    <div>
+    <div className = 'container'>
       <SearchForm />
       <SearchResponse />
     </div>

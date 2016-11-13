@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import store from '../index'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import {Tabs, Tab} from 'material-ui/Tabs';
-import Slider from 'material-ui/Slider';
 import { Router, Route, Link } from 'react-router'
 import MainContainer from './main-container'
 import RandomContainer from './random-recipe-container'
@@ -24,12 +23,12 @@ var App = function(props) {
                   </h3>
                 </div>
               </Tab>
-              <Tab label="Ingredient Search">
+              <Tab label="Recipe Ingredient Search">
                 <div>
                 <MainContainer />
                 </div>
               </Tab>
-              <Tab label="Random Search" >
+              <Tab label="Random Recipe" >
                 <div>
                 <RandomContainer />
                 </div>

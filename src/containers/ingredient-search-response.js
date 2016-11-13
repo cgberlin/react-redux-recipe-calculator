@@ -11,10 +11,15 @@ class SearchResponse extends Component{
     var title = recipe.title;
     var imageSrc = recipe.image;
     var instructions = recipe.instructions;
-    console.log(recipe.extendedIngredients);
+    var cardStyle = {
+        display: 'block',
+        width: '50vw',
+        transitionDuration: '0.3s',
+        height: '30vh'
+    }
     return (
       <div id = "response-card">
-        <Card>
+        <Card style = {cardStyle}>
             <CardMedia overlay={<CardTitle title={title} />}>
               <img src={imageSrc} />
             </CardMedia>
