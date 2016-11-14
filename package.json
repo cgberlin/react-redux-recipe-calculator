@@ -2,6 +2,9 @@
   "name": "directors-application-react-redux",
   "version": "0.0.1",
   "description": "recipe application using react and redux",
+  "engines": {
+  "node": "4.2.x"
+},
   "scripts": {
     "clean": "rimraf dist",
     "build": "webpack --progress --verbose --colors --display-error-details --config webpack/common.config.js",
