@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "description": "recipe application using react and redux",
   "engines": {
-  "node": "4.2.x"
+  "node": "4.2.6",
+  "npm": "3.10.9"
 },
   "scripts": {
     "clean": "rimraf dist",
