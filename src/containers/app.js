@@ -8,7 +8,7 @@ import MainContainer from './main-container'
 import RandomContainer from './random-recipe-container'
 
 
-const App = (props) => {
+var App = function(props) {
     return (
       <MuiThemeProvider>
         <div>
