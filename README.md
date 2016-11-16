@@ -20,6 +20,5 @@ The front end is built using React and Redux with Material-UI for the
 styling of the components.
 
 ![alt text](http://i.imgur.com/ooPt1mq.png "Ingredient Search")
-
 ![alt text](http://i.imgur.com/G7NH34d.png "Search Response")
 
