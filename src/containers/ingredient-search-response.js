@@ -12,10 +12,7 @@ class SearchResponse extends Component{
     var imageSrc = recipe.image;
     var instructions = recipe.instructions;
     var cardStyle = {
-        display: 'block',
-        width: '50vw',
-        transitionDuration: '0.3s',
-        height: '30vh'
+        
     }
     return (
       <div id = "response-card">

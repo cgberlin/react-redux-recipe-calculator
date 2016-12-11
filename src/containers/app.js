@@ -23,7 +23,7 @@ var App = function(props) {
                   </h3>
                 </div>
               </Tab>
-              <Tab label="Recipe Ingredient Search">
+              <Tab label="Search">
                 <div>
                 <MainContainer />
                 </div>
