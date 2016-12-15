@@ -22,3 +22,5 @@ styling of the components.
 ![alt text](http://i.imgur.com/ooPt1mq.png "Ingredient Search")
 ![alt text](http://i.imgur.com/G7NH34d.png "Search Response")
 
+##DEMO 
+https://cgberlin-recipe.herokuapp.com/

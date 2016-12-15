@@ -28,7 +28,7 @@ var App = function(props) {
                 <MainContainer />
                 </div>
               </Tab>
-              <Tab label="Random Recipe" >
+              <Tab label="Random" >
                 <div>
                 <RandomContainer />
                 </div>
