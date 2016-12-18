@@ -8,7 +8,7 @@ import IngredientList from './ingredient-list'
 class SearchResponse extends Component{
   constructor(props) {
     super(props);
-    this.state = {opacity: 0};
+    this.state = {opacity: 0, loadOpacity: 0};
   }
   render() {
     var recipe = this.props.Response;
@@ -18,8 +18,12 @@ class SearchResponse extends Component{
     var cardStyle = {
        opacity:this.state.opacity
     }
+    var loadStyle = {
+      opacity:this.state.loadOpacity
+    }
     return (
       <div id = "response-card">
+      
         <Card style = {cardStyle}>
             <CardMedia overlay={<CardTitle title={title} />}>
               <img src={imageSrc} onLoad = {() => this.setState({opacity: 1})}/>
